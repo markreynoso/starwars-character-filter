@@ -1,13 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ResultList from './result_list.jsx';
 
-export class Results extends React.Component {
+class Results extends React.Component {
   render () {
-    // function to get all the items
+    let character = this.props.results.map(function(result) {
+      return <ResultList
+                key={result.name}
+                name={result.name}
+                gender={result.gender}
+                hairColor={result.hair_color}
+                eyeColor={result.eye_color} />
+      });
     return (
-      <ul>
-        {resultList}
-      </ul>
+      <div>
+        {character}
+      </div>
     )
   }
 }
+
+export default Results;

@@ -6,12 +6,12 @@ const config = {
   entry: path.join(__dirname, '/src/scripts/index.js'),
   output: {
     path: path.join(__dirname, './build'),
-    filename: 'bundle.[hash].js',
+    filename: 'bundle.js',
   },
   plugins: [
     new HTMLPlugin({template: `${__dirname}/src/index.html`}),
     // configure the output of the total CSS file
-    new ExtractPlugin('bundle.[hash].css'),
+    new ExtractPlugin('bundle.css'),
   ],
   module: {
     rules: [
