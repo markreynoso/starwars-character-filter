@@ -1,16 +1,21 @@
 import React from 'react';
 import Search from './search.jsx';
 import Results from './results.jsx';
+import Filter from './gender_filter.jsx'
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       searchName: '',
-      results: []
+      gender: 'none',
+      results: [],
+      output: []
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleSelection = this.handleSelection.bind(this);
+    this.setOutput = this.setOutput.bind(this);
   }
 
   handleChange(event) {
@@ -28,8 +33,47 @@ class App extends React.Component {
         this.setState({
           results: data.results
         });
+        this.setOutput()
       }
     });
+  }
+
+  handleSelection(event) {
+    console.log(event);
+    this.setState({
+      gender: event.target.value
+    });
+    this.setOutput();
+  }
+
+  setOutput() {
+    if (this.state.output != []) {
+      if (this.state.gender === 'none') {
+        this.setState({
+          output: this.state.results
+        });
+      } else if (this.state.gender === 'male') {
+        let males = []
+        this.state.results.map(function(character) {
+          if (character.gender === 'male') {
+            males.push(character)
+          }
+        })
+        this.setState({
+          output: males
+        })
+      } else if (this.state.gender === 'female') {
+        let females = []
+        this.state.results.map(function(character) {
+          if (character.gender === 'male') {
+            females.push(character)
+          }
+        })
+        this.setState({
+          output: females
+        })
+      }
+    }
   }
 
   render() {
@@ -39,7 +83,8 @@ class App extends React.Component {
           searchName={this.state.searchName}
           handleChange={this.handleChange}
           handleClick={this.handleClick} />
-        <Results results={this.state.results} />
+        <Filter handleSelection={this.handleSelection} gender={this.state.gender}/>
+        <Results output={this.state.output} results={this.state.results} />
       </div>
     )
   }

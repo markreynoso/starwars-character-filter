@@ -3,7 +3,7 @@ import ResultList from './result_list.jsx';
 
 class Results extends React.Component {
   render () {
-    let character = this.props.results.map(function(result) {
+    let character = this.props.output.map(function(result) {
       return <ResultList
                 key={result.name}
                 name={result.name}
