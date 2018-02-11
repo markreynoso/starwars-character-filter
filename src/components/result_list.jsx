@@ -20,7 +20,7 @@ class ResultList extends React.Component {
       <div>
         <p>{this.props.name}</p>
         <ul>
-          {attribute}
+        {attribute}
         </ul>
       </div>
     )

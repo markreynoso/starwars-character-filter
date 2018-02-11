@@ -38,8 +38,13 @@ class App extends React.Component {
     });
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.gender !== this.state.gender) {
+      this.setOutput()
+    }
+  }
+
   handleSelection(event) {
-    console.log(event);
     this.setState({
       gender: event.target.value
     });
@@ -47,7 +52,7 @@ class App extends React.Component {
   }
 
   setOutput() {
-    if (this.state.output != []) {
+    if (this.state.results != []) {
       if (this.state.gender === 'none') {
         this.setState({
           output: this.state.results
@@ -65,7 +70,7 @@ class App extends React.Component {
       } else if (this.state.gender === 'female') {
         let females = []
         this.state.results.map(function(character) {
-          if (character.gender === 'male') {
+          if (character.gender === 'female') {
             females.push(character)
           }
         })
@@ -83,11 +88,15 @@ class App extends React.Component {
           searchName={this.state.searchName}
           handleChange={this.handleChange}
           handleClick={this.handleClick} />
-        <Filter handleSelection={this.handleSelection} gender={this.state.gender}/>
-        <Results output={this.state.output} results={this.state.results} />
+        <Filter
+          handleSelection={this.handleSelection}
+          gender={this.state.gender}
+          output={this.state.output}
+          results={this.state.results} />
       </div>
     )
   }
 }
 
+// <Results output={this.state.output} />
 export default App;

@@ -1,5 +1,6 @@
 import React from 'react';
 import ResultList from './result_list.jsx';
+import Vader from '../images/vader-icon.svg';
 
 class Results extends React.Component {
   render () {
@@ -14,6 +15,10 @@ class Results extends React.Component {
     return (
       <div>
         {character}
+        <div>
+          <img src={Vader} alt='Vader' />
+          <p>Search by character name</p>
+        </div>
       </div>
     )
   }
