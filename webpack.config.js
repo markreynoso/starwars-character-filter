@@ -36,6 +36,10 @@ const config = {
           ],
         }),
       },
+      {
+        test: /\.svg$/,
+        loader: 'svg-react-loader',
+      },
     ],
   },
 };

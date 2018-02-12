@@ -1,0 +1,21 @@
+@import 'reset';
+
+$font-main: Helvetica, sans-serif;
+
+body {
+  background-color: #F7F8FA;
+}
+
+.vader-show {
+  display: block;
+}
+
+.vader-hide {
+  display: none;
+}
+
+.shadow {
+  -webkit-box-shadow: 0px 0px 36px -10px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 36px -10px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 36px -10px rgba(0,0,0,0.5);
+}

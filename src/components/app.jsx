@@ -44,9 +44,9 @@ class App extends React.Component {
     }
   }
 
-  handleSelection(event) {
+  handleSelection(gender) {
     this.setState({
-      gender: event.target.value
+      gender: gender.value
     });
     this.setOutput();
   }

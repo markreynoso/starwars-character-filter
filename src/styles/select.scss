@@ -1,310 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-body {
-  background-color: #F7F8FA;
-}
-
-.vader-show {
-  display: block;
-}
-
-.vader-hide {
-  display: none;
-}
-
-.shadow {
-  -webkit-box-shadow: 0px 0px 36px -10px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 0px 36px -10px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 36px -10px rgba(0, 0, 0, 0.5);
-}/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-body {
-  background-color: #F7F8FA;
-}
-
-.vader-show {
-  display: block;
-}
-
-.vader-hide {
-  display: none;
-}
-
-.shadow {
-  -webkit-box-shadow: 0px 0px 36px -10px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 0px 36px -10px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 36px -10px rgba(0, 0, 0, 0.5);
-}
+@import 'base';
 
 .select-menu {
   width: 15vw;
@@ -315,9 +9,7 @@ select {
   border: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: url(function ChevronDown(props) {
-    return React.createElement("svg",props,[React.createElement("title",{"key":0},"Path 70"),React.createElement("desc",{"key":1},"Created with Sketch."),React.createElement("defs",{"key":2}),React.createElement("g",{"id":"Page-1","stroke":"none","strokeWidth":"1","fill":"none","fillRule":"evenodd","key":3},React.createElement("g",{"id":"Initial-State","transform":"translate(-646.000000, -185.000000)","fillRule":"nonzero","fill":"#C9CBCF"},React.createElement("g",{"id":"Filter","transform":"translate(441.000000, 171.000000)"},React.createElement("g",{"id":"Select","transform":"translate(77.000000, 0.000000)"},React.createElement("path",{"d":"M131.666437,17.2847261 C131.368317,17.5980242 131.368317,18.1059809 131.666437,18.4192791 L137.897522,24.9675963 C138.127158,25.2089228 138.501364,25.2069326 138.727624,24.9691536 L138.978594,24.7054067 C139.207411,24.4649402 139.203415,24.070908 138.973097,23.828913 L133.285205,17.8526508 L138.973097,11.8751813 C139.20495,11.6315244 139.204854,11.2363775 138.978594,10.9985984 L138.727624,10.7348516 C138.498807,10.4943851 138.121554,10.500971 137.897522,10.7364089 L131.666437,17.2847261 Z","id":"Path-70","transform":"translate(135.295443, 17.852596) rotate(-90.000000) translate(-135.295443, -17.852596) "})))))]);
-}) no-repeat;
+  background: url('../images/chevron-down.svg')  no-repeat;
 }
 
 .Select-clear-zone {
@@ -441,8 +133,7 @@ select {
   text-decoration: none;
 }
 
-.has-value.Select--single > .Select-control .Select-value a.Select-value-label:hover,
-.has-value.Select--single > .Select-control .Select-value a.Select-value-label:focus,
+.has-value.Select--single > .Select-control .Select-value a.Select-value-label:hover, .has-value.Select--single > .Select-control .Select-value a.Select-value-label:focus,
 .has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label:hover,
 .has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label:focus {
   color: #ac208e;
@@ -463,7 +154,7 @@ select {
   box-shadow: none;
   cursor: default;
   display: inline-block;
-  font-family: Helvetica, sans-serif;
+  font-family: $font-main;
   font-size: inherit;
   margin: 0;
   outline: none;
@@ -510,6 +201,7 @@ select {
   vertical-align: middle;
 }
 
+
 .Select .Select-aria-only {
   display: inline-block;
   height: 1px;
@@ -548,7 +240,6 @@ select {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -558,7 +249,6 @@ select {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -608,30 +298,4 @@ select {
 .Select-option.is-focused {
   background-color: #fefbfd;
   color: #ac208e;
-}.layout-boxes {
-  width: 60%;
-  margin: auto;
-  background-color: white;
-  margin-bottom: 5%;
-  text-align: center;
-}
-
-.filters {
-  background: none;
-}
-
-.results {
-  display: block;
-}
-
-.input-box {
-  margin-top: 15%;
-}
-
-.float-left {
-  float: left;
-}
-
-.float-right {
-  float: right;
 }

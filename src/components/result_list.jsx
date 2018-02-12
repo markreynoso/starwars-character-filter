@@ -19,7 +19,7 @@ class ResultList extends React.Component {
     return (
       <div>
         <p>{this.props.name}</p>
-        <ul>
+        <ul className='character-item' >
         {attribute}
         </ul>
       </div>

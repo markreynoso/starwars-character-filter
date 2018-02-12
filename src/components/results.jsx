@@ -12,11 +12,17 @@ class Results extends React.Component {
                 hairColor={result.hair_color}
                 eyeColor={result.eye_color} />
       });
+    let vader = ''
+    if (this.props.output.length === 0) {
+      vader = 'vader-show'
+    } else {
+      vader = 'vader-hide'
+    }
     return (
-      <div>
+      <div className='shadow layout-boxes results'>
         {character}
-        <div>
-          <img src={Vader} alt='Vader' />
+        <div className={vader} >
+          <Vader />
           <p>Search by character name</p>
         </div>
       </div>

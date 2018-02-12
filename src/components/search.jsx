@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 class Search extends React.Component {
   render () {
     return (
-      <div>
+      <div className='shadow layout-boxes input-box'>
         <input
           type='text'
           placeholder='Search by character name'
