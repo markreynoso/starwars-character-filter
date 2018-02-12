@@ -28,20 +28,22 @@ class Filter extends React.Component {
     ]
 
     return (
-      <div className='layout-boxes filters' >
-        <div>
-          <p className='float-left'>{count}</p>
+      <div>
+        <div className='layout-boxes filters'>
+          <div className='num-results' >
+            <p>{count}</p>
+          </div>
+          <Select
+            className='shadow float-right select-menu'
+            value={this.props.gender}
+            onChange={this.props.handleSelection}
+            options={opts}
+            arrowRenderer={() => {
+              return <Chev />
+            }}
+          />
+          <label class='float-right label'>GENDER</label>
         </div>
-        <Select
-          className='shadow float-right select-menu'
-          value={this.props.gender}
-          onChange={this.props.handleSelection}
-          options={opts}
-          arrowRenderer={() => {
-            return <Chev />
-          }}
-        />
-        <label class='float-right'>GENDER</label>
         <Results output={this.props.output} />
       </div>
     )

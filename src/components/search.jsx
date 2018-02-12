@@ -6,11 +6,12 @@ class Search extends React.Component {
     return (
       <div className='shadow layout-boxes input-box'>
         <input
+          className='input-text'
           type='text'
           placeholder='Search by character name'
           value={this.props.searchName}
           onChange={this.props.handleChange } />
-        <button onClick={this.props.handleClick} >Search</button>
+        <button className='button' onClick={this.props.handleClick} >Search</button>
       </div>
     )
   }

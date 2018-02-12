@@ -18587,13 +18587,14 @@ var Search = function (_React$Component) {
         'div',
         { className: 'shadow layout-boxes input-box' },
         _react2.default.createElement('input', {
+          className: 'input-text',
           type: 'text',
           placeholder: 'Search by character name',
           value: this.props.searchName,
           onChange: this.props.handleChange }),
         _react2.default.createElement(
           'button',
-          { onClick: this.props.handleClick },
+          { className: 'button', onClick: this.props.handleClick },
           'Search'
         )
       );
@@ -18823,29 +18824,33 @@ var Filter = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        { className: 'layout-boxes filters' },
+        null,
         _react2.default.createElement(
           'div',
-          null,
+          { className: 'layout-boxes filters' },
           _react2.default.createElement(
-            'p',
-            { className: 'float-left' },
-            count
+            'div',
+            { className: 'num-results' },
+            _react2.default.createElement(
+              'p',
+              null,
+              count
+            )
+          ),
+          _react2.default.createElement(_reactSelect2.default, {
+            className: 'shadow float-right select-menu',
+            value: this.props.gender,
+            onChange: this.props.handleSelection,
+            options: opts,
+            arrowRenderer: function arrowRenderer() {
+              return _react2.default.createElement(_chevronDown2.default, null);
+            }
+          }),
+          _react2.default.createElement(
+            'label',
+            { 'class': 'float-right label' },
+            'GENDER'
           )
-        ),
-        _react2.default.createElement(_reactSelect2.default, {
-          className: 'shadow float-right select-menu',
-          value: this.props.gender,
-          onChange: this.props.handleSelection,
-          options: opts,
-          arrowRenderer: function arrowRenderer() {
-            return _react2.default.createElement(_chevronDown2.default, null);
-          }
-        }),
-        _react2.default.createElement(
-          'label',
-          { 'class': 'float-right' },
-          'GENDER'
         ),
         _react2.default.createElement(_results2.default, { output: this.props.output })
       );
