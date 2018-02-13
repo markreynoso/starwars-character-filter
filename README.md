@@ -59,7 +59,7 @@ You are now ready to run the program on your local machine.
 
 Open your browser and navigate to the following url and you can search the Star Wars API(SWAPI).
 
-`localhost:3000`
+[localhost](http://localhost:3000)
 
 ### Test Suite
 ---
