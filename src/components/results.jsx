@@ -19,11 +19,13 @@ class Results extends React.Component {
       vader = 'vader-hide'
     }
     return (
-      <div className='shadow layout-boxes results'>
-        {character}
-        <div className={vader} >
-          <Vader />
-          <p>Search by character name</p>
+      <div className='results-box'>
+        <div className='all-chars'>
+          {character}
+        </div>
+        <div className={vader}>
+            <Vader />
+            <p>Search by character name</p>
         </div>
       </div>
     )

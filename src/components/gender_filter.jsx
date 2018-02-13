@@ -42,7 +42,7 @@ class Filter extends React.Component {
               return <Chev />
             }}
           />
-          <label class='float-right label'>GENDER</label>
+          <label className='float-right label'>GENDER</label>
         </div>
         <Results output={this.props.output} />
       </div>

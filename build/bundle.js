@@ -1059,8 +1059,12 @@ var Results = function (_React$Component) {
       }
       return _react2.default.createElement(
         'div',
-        { className: 'shadow layout-boxes results' },
-        character,
+        { className: 'results-box' },
+        _react2.default.createElement(
+          'div',
+          { className: 'all-chars' },
+          character
+        ),
         _react2.default.createElement(
           'div',
           { className: vader },
@@ -18649,20 +18653,46 @@ var ResultList = function (_React$Component) {
     value: function render() {
       var attributeList = [];
       if (this.props.gender === 'female' || this.props.gender === 'male') {
-        attributeList.push(this.props.gender);
+        var capitalGender = this.props.gender.charAt(0).toUpperCase() + this.props.gender.slice(1);
+        attributeList.push(capitalGender);
       }
-      if (this.props.hairColor != 'none') {
-        attributeList.push(this.props.hairColor);
+      if (this.props.hairColor !== 'none') {
+        if (this.props.hairColor !== 'n/a') {
+          var hairList = this.props.hairColor.split(' ');
+          var capitalHair = '';
+          for (var i = 0; i < hairList.length; i++) {
+            var capitalize = hairList[i].charAt(0).toUpperCase() + hairList[i].slice(1);
+            if (i === 0) {
+              capitalHair = capitalize;
+            } else {
+              capitalHair += ' ' + capitalize;
+            }
+          }
+          attributeList.push(capitalHair);
+        }
       }
-      if (this.props.eyeColor != 'none') {
-        attributeList.push(this.props.eyeColor);
+      if (this.props.eyeColor !== 'none') {
+        if (this.props.eyeColor !== 'n/a') {
+          var eyeList = this.props.eyeColor.split(' ');
+          var capitalEye = '';
+          for (var _i = 0; _i < eyeList.length; _i++) {
+            var _capitalize = eyeList[_i].charAt(0).toUpperCase() + eyeList[_i].slice(1);
+            if (_i === 0) {
+              capitalEye = _capitalize;
+            } else {
+              capitalEye += ' ' + _capitalize;
+            }
+          }
+          attributeList.push(capitalEye);
+        }
       }
+
       var attribute = attributeList.map(function (attr, index) {
         return _react2.default.createElement(_attributes2.default, { key: index, attr: attr });
       });
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'single-char' },
         _react2.default.createElement(
           'p',
           null,
@@ -18848,7 +18878,7 @@ var Filter = function (_React$Component) {
           }),
           _react2.default.createElement(
             'label',
-            { 'class': 'float-right label' },
+            { className: 'float-right label' },
             'GENDER'
           )
         ),

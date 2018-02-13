@@ -139,6 +139,11 @@ body {
   background-color: #F7F8FA;
 }
 
+#content {
+  width: 60%;
+  margin: auto;
+}
+
 .vader-show {
   display: block;
 }
@@ -147,10 +152,22 @@ body {
   display: none;
 }
 
-.shadow {
+.shadow,
+.vader-show,
+.all-chars {
   -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.3);
+}
+
+#content {
+  max-width: 550px;
+}
+
+@media (max-width: 600px) {
+  #content {
+    width: 85%;
+  }
 }/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -292,6 +309,11 @@ body {
   background-color: #F7F8FA;
 }
 
+#content {
+  width: 60%;
+  margin: auto;
+}
+
 .vader-show {
   display: block;
 }
@@ -300,10 +322,22 @@ body {
   display: none;
 }
 
-.shadow {
+.shadow,
+.vader-show,
+.all-chars {
   -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.3);
+}
+
+#content {
+  max-width: 550px;
+}
+
+@media (max-width: 600px) {
+  #content {
+    width: 85%;
+  }
 }
 
 .select-menu {
@@ -610,13 +644,13 @@ select {
   background-color: #fefbfd;
   color: #ac208e;
 }.layout-boxes {
-  margin: auto;
   background-color: white;
   text-align: center;
 }
 
 .filters {
   background: none;
+  height: 60px;
 }
 
 .results {
@@ -629,11 +663,6 @@ select {
 
 .float-right {
   float: right;
-}
-
-#content {
-  width: 60%;
-  margin: auto;
 }
 
 .input-box {
@@ -698,4 +727,60 @@ select {
   font-family: helvetica;
   font-size: 16px;
   padding: 10px 15px 0 0;
+}
+
+.vader-show {
+  padding: 150px 0;
+  text-align: center;
+  background: white;
+}
+
+.vader-show p {
+  color: #BFBFBF;
+  font-family: helvetica;
+  font-size: 22px;
+  padding-top: 15px;
+}
+
+.all-chars {
+  border-radius: 3px;
+  background: white;
+}
+
+.all-chars > *:first-child {
+  border-top: none;
+}
+
+.single-char {
+  padding: 15px 0 15px 15px;
+  border-top: solid;
+  border-top-color: rgba(191, 191, 191, 0.5);
+  border-width: 1px;
+}
+
+.single-char ul {
+  padding-top: 4px;
+}
+
+.single-char li {
+  display: inline-block;
+  font-family: helvetica;
+  font-size: 14px;
+  color: #B8BABF;
+}
+
+.single-char li:before {
+  content: '\A0\2022\A0\A0';
+  color: #B8BABF;
+  font-size: 14px;
+}
+
+.single-char li:first-child:before {
+  content: '';
+}
+
+.single-char p {
+  font-family: helvetica;
+  font-size: 16px;
+  color: 333333;
 }
