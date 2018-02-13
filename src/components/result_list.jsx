@@ -13,11 +13,11 @@ class ResultList extends React.Component {
         let hairList = this.props.hairColor.split(' ')
         let capitalHair = ''
         for (let i = 0; i < hairList.length; i++) {
-          let capitalize = hairList[i].charAt(0).toUpperCase() + hairList[i].slice(1)
+          let capitalize = hairList[i].charAt(0).toUpperCase() + hairList[i].slice(1).replace(/,/g, '')
           if (i === 0) {
-            capitalHair = capitalize
+            capitalHair = capitalize + ' hair'
           } else {
-            capitalHair += (' ' + capitalize)
+            capitalHair += (', ' + capitalize + ' hair')
           }
         }
         attributeList.push(capitalHair)
@@ -28,11 +28,11 @@ class ResultList extends React.Component {
         let eyeList = this.props.eyeColor.split(' ')
         let capitalEye = ''
         for (let i = 0; i < eyeList.length; i++) {
-          let capitalize = eyeList[i].charAt(0).toUpperCase() + eyeList[i].slice(1)
+          let capitalize = eyeList[i].charAt(0).toUpperCase() + eyeList[i].slice(1).replace(/,/g, '')
           if (i === 0) {
-            capitalEye = capitalize
+            capitalEye = capitalize + ' eyes'
           } else {
-            capitalEye += (' ' + capitalize)
+            capitalEye += (', ' + capitalize + ' eyes')
           }
         }
         attributeList.push(capitalEye)

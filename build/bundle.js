@@ -18565,6 +18565,16 @@ var App = function (_React$Component) {
           this.setState({
             output: females
           });
+        } else if (this.state.gender === 'n/a') {
+          var na = [];
+          this.state.results.map(function (character) {
+            if (character.gender === 'n/a' || character.gender === 'none') {
+              na.push(character);
+            }
+          });
+          this.setState({
+            output: na
+          });
         }
       }
     }
@@ -18709,11 +18719,11 @@ var ResultList = function (_React$Component) {
           var hairList = this.props.hairColor.split(' ');
           var capitalHair = '';
           for (var i = 0; i < hairList.length; i++) {
-            var capitalize = hairList[i].charAt(0).toUpperCase() + hairList[i].slice(1);
+            var capitalize = hairList[i].charAt(0).toUpperCase() + hairList[i].slice(1).replace(/,/g, '');
             if (i === 0) {
-              capitalHair = capitalize;
+              capitalHair = capitalize + ' hair';
             } else {
-              capitalHair += ' ' + capitalize;
+              capitalHair += ', ' + capitalize + ' hair';
             }
           }
           attributeList.push(capitalHair);
@@ -18724,11 +18734,11 @@ var ResultList = function (_React$Component) {
           var eyeList = this.props.eyeColor.split(' ');
           var capitalEye = '';
           for (var _i = 0; _i < eyeList.length; _i++) {
-            var _capitalize = eyeList[_i].charAt(0).toUpperCase() + eyeList[_i].slice(1);
+            var _capitalize = eyeList[_i].charAt(0).toUpperCase() + eyeList[_i].slice(1).replace(/,/g, '');
             if (_i === 0) {
-              capitalEye = _capitalize;
+              capitalEye = _capitalize + ' eyes';
             } else {
-              capitalEye += ' ' + _capitalize;
+              capitalEye += ', ' + _capitalize + ' eyes';
             }
           }
           attributeList.push(capitalEye);
@@ -18897,14 +18907,17 @@ var Filter = function (_React$Component) {
       }
       var female = 0;
       var male = 0;
+      var na = 0;
       this.props.results.map(function (result) {
         if (result.gender === 'female') {
           female++;
         } else if (result.gender === 'male') {
           male++;
+        } else if (result.gender === 'n/a' || result.gender === 'none') {
+          na++;
         }
       });
-      var opts = [{ value: 'none', label: 'Filter by gender' }, { value: 'female', label: 'Female(' + female + ')' }, { value: 'male', label: 'Male(' + male + ')' }];
+      var opts = [{ value: 'none', label: 'Filter by gender' }, { value: 'female', label: 'Female(' + female + ')' }, { value: 'male', label: 'Male(' + male + ')' }, { value: 'n/a', label: 'n/a(' + na + ')' }];
 
       return _react2.default.createElement(
         'div',

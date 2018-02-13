@@ -135,16 +135,6 @@ table {
   border-spacing: 0;
 }
 
-@font-face {
-  font-family: 'montserrat-r';
-  src: url(fonts/MontSerrat-Regular.ttf) format("ttf");
-}
-
-@font-face {
-  font-family: 'montserrat-b';
-  src: url(fonts/MontSerrat-Bold.ttf) format("ttf");
-}
-
 body {
   background-color: #F7F8FA;
 }
@@ -315,16 +305,6 @@ table {
   border-spacing: 0;
 }
 
-@font-face {
-  font-family: 'montserrat-r';
-  src: url(fonts/MontSerrat-Regular.ttf) format("ttf");
-}
-
-@font-face {
-  font-family: 'montserrat-b';
-  src: url(fonts/MontSerrat-Bold.ttf) format("ttf");
-}
-
 body {
   background-color: #F7F8FA;
 }
@@ -360,9 +340,14 @@ body {
   }
 }
 
+@font-face {
+  font-family: 'montserrat-b';
+  src: url(fonts/MontSerrat-Bold.ttf) format("ttf");
+}
+
 .select-menu {
   text-align: left;
-  font-family: "montserrat-r", sans-serif;
+  font-family: 'montserrat-b', sans-serif;
   font-size: 14px;
   width: 28%;
 }
@@ -528,7 +513,7 @@ select {
   box-shadow: none;
   cursor: default;
   display: inline-block;
-  font-family: "montserrat-r", sans-serif;
+  font-family: 'montserrat-b', sans-serif;
   font-size: inherit;
   color: #323233;
   margin: 0;
@@ -811,16 +796,6 @@ table {
   border-spacing: 0;
 }
 
-@font-face {
-  font-family: 'montserrat-r';
-  src: url(fonts/MontSerrat-Regular.ttf) format("ttf");
-}
-
-@font-face {
-  font-family: 'montserrat-b';
-  src: url(fonts/MontSerrat-Bold.ttf) format("ttf");
-}
-
 body {
   background-color: #F7F8FA;
 }
@@ -854,6 +829,16 @@ body {
   #content {
     width: 85%;
   }
+}
+
+@font-face {
+  font-family: 'montserrat-r';
+  src: url(fonts/glyphicons-halflings-regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'montserrat-b';
+  src: url(fonts/MontSerrat-Bold.ttf) format("truetype");
 }
 
 .layout-boxes {
@@ -898,6 +883,8 @@ body {
   border-color: rgba(191, 191, 191, 0.5);
   border-width: 1px;
   font-family: "montserrat-r", sans-serif;
+  word-spacing: -10px;
+  letter-spacing: .5px;
   font-size: 16px;
   color: #333333;
 }
@@ -925,7 +912,7 @@ body {
   color: white;
   font-family: "montserrat-r", sans-serif;
   font-size: 14px;
-  font-weight: lighter;
+  letter-spacing: .5px;
 }
 
 .button:hover {
@@ -937,16 +924,21 @@ body {
 }
 
 .num-results {
-  color: #999B9E;
-  font-family: "montserrat-r", sans-serif;
-  font-size: 13px;
   float: left;
   padding-top: 12px;
 }
 
+.num-results p {
+  color: #999B9E;
+  font-family: "montserrat-b", sans-serif;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+}
+
 .label {
   color: #999B9E;
-  font-family: "montserrat-r", sans-serif;
+  font-family: "montserrat-b", sans-serif;
+  letter-spacing: 1.5px;
   font-size: 13px;
   padding: 12px 15px 0 0;
 }
@@ -959,8 +951,10 @@ body {
 
 .vader-show p {
   color: #BFBFBF;
-  font-family: "montserrat-b", sans-serif;
+  font-family: "montserrat-r", sans-serif;
   font-size: 22px;
+  word-spacing: -15px;
+  letter-spacing: 0.03em;
   padding-top: 15px;
 }
 
@@ -988,6 +982,9 @@ body {
   display: inline-block;
   font-family: "montserrat-r", sans-serif;
   font-size: 14px;
+  letter-spacing: .5px;
+  word-spacing: -11px;
+  padding-right: 1px;
   color: #B8BABF;
 }
 
@@ -995,6 +992,9 @@ body {
   content: '\A0\2022\A0\A0';
   color: #B8BABF;
   font-size: 14px;
+  padding-top: 2px;
+  margin-right: -3px;
+  vertical-align: middle;
 }
 
 .single-char li:first-child:before {
@@ -1004,6 +1004,9 @@ body {
 .single-char p {
   font-family: "montserrat-r", sans-serif;
   font-size: 16px;
+  letter-spacing: .5px;
+  word-spacing: -10px;
+  margin-right: 0;
   color: 333333;
 }
 

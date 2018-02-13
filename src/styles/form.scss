@@ -1,5 +1,17 @@
 @import 'base';
 
+@font-face {
+  font-family: 'montserrat-r';
+  src: url('./fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+}
+@font-face {
+  font-family: 'montserrat-b';
+  src: url('./fonts/MontSerrat-Bold.ttf') format('truetype'),
+}
+
+$font-main: 'montserrat-r', sans-serif;
+$font-bold: 'montserrat-b', sans-serif;
+
 .layout-boxes {
   background-color: white;
   text-align: center;
@@ -36,6 +48,8 @@
   border-color: rgba(191, 191, 191, .5);
   border-width: 1px;
   font-family: $font-main;
+  word-spacing: -10px;
+  letter-spacing: .5px;
   font-size: 16px;
   color: #333333;
 }
@@ -60,7 +74,7 @@
   color: white;
   font-family: $font-main;
   font-size: 14px;
-  font-weight: lighter;
+  letter-spacing: .5px;
 }
 .button:hover {
   box-shadow: 0 0 11px rgba(0, 0, 0, .2);
@@ -69,15 +83,19 @@
   outline: none;
 }
 .num-results {
-  color: #999B9E;
-  font-family: $font-main;
-  font-size: 13px;
   float: left;
   padding-top: 12px;
+  p {
+    color: #999B9E;
+    font-family: $font-bold;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+  }
 }
 .label {
   color: #999B9E;
-  font-family: $font-main;
+  font-family: $font-bold;
+  letter-spacing: 1.5px;
   font-size: 13px;
   padding: 12px 15px 0 0;
 }
@@ -88,8 +106,10 @@
   background: white;
   p {
     color: #BFBFBF;
-    font-family: $font-bold;
+    font-family: $font-main;
     font-size: 22px;
+    word-spacing: -15px;
+    letter-spacing: 0.03em;
     padding-top: 15px;
   }
 }
@@ -112,12 +132,18 @@
     display: inline-block;
     font-family: $font-main;
     font-size: 14px;
+    letter-spacing: .5px;
+    word-spacing: -11px;
+    padding-right: 1px;
     color: #B8BABF;
   }
   li:before {
 	content: '\00a0\2022\00a0\00a0';
 	color: #B8BABF;
 	font-size: 14px;
+  padding-top: 2px;
+  margin-right: -3px;
+  vertical-align: middle;
   }
   li:first-child:before {
 	content: '';
@@ -125,6 +151,9 @@
   p {
     font-family: $font-main;
     font-size: 16px;
+    letter-spacing: .5px;
+    word-spacing: -10px;
+    margin-right: 0;
     color: 333333;
   }
 }

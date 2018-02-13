@@ -1,8 +1,13 @@
 @import 'base';
 
+@font-face {
+  font-family: 'montserrat-b';
+  src: url('./fonts/MontSerrat-Bold.ttf') format('ttf'),
+}
+
 .select-menu {
   text-align: left;
-  font-family: $font-main;
+  font-family: 'montserrat-b', sans-serif;
   font-size: 14px;
   width: 28%;
 }
@@ -164,7 +169,7 @@ select {
   box-shadow: none;
   cursor: default;
   display: inline-block;
-  font-family: $font-main;
+  font-family: 'montserrat-b', sans-serif;
   font-size: inherit;
   color: #323233;
   margin: 0;

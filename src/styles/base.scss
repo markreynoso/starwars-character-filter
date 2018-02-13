@@ -1,17 +1,5 @@
 @import 'reset';
 
-@font-face {
-  font-family: 'montserrat-r';
-  src: url('../fonts/MontSerrat-Regular.ttf') format('ttf'),
-}
-@font-face {
-  font-family: 'montserrat-b';
-  src: url('../fonts/MontSerrat-Bold.ttf') format('ttf'),
-}
-
-$font-main: 'montserrat-r', sans-serif;
-$font-bold: 'montserrat-b', sans-serif;
-
 body {
   background-color: #F7F8FA;
 }

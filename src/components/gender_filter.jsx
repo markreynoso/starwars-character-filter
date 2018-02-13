@@ -14,17 +14,21 @@ class Filter extends React.Component {
     }
     let female = 0
     let male = 0
+    let na = 0
     this.props.results.map(function(result){
       if (result.gender === 'female') {
         female++
       } else if (result.gender === 'male') {
         male++
+      } else if (result.gender === 'n/a' || result.gender === 'none') {
+        na++
       }
     });
     const opts = [
       {value: 'none', label: 'Filter by gender'},
       {value: 'female', label: `Female(${female})`},
-      {value: 'male', label: `Male(${male})`}
+      {value: 'male', label: `Male(${male})`},
+      {value: 'n/a', label: `n/a(${na})`}
     ]
 
     return (

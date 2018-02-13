@@ -113,6 +113,16 @@ class App extends React.Component {
         this.setState({
           output: females
         })
+      } else if (this.state.gender === 'n/a') {
+        let na = []
+        this.state.results.map(function(character) {
+          if (character.gender === 'n/a' || character.gender === 'none') {
+            na.push(character)
+          }
+        })
+        this.setState({
+          output: na
+        })
       }
     }
   }
