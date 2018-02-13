@@ -40,6 +40,16 @@ const config = {
         test: /\.svg$/,
         loader: 'svg-react-loader',
       },
+      {
+        test: /\.png$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8000,
+            name: 'images/[name].[ext]'
+          },
+        }]
+      },
     ],
   },
 };

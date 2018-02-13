@@ -1,7 +1,7 @@
 import React from 'react';
 import Search from './search.jsx';
 import Results from './results.jsx';
-import Filter from './gender_filter.jsx'
+import Filter from './gender_filter.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -25,21 +25,8 @@ class App extends React.Component {
     });
   }
 
-  // handleClick() {
-  //   $.ajax({
-  //     type: 'GET',
-  //     dataType: 'json',
-  //     url: `https://swapi.co/api/people/?search=${this.state.searchName}`,
-  //     success: data => {
-  //       this.setState({
-  //         results: data.results
-  //       });
-  //       this.setOutput()
-  //     }
-  //   });
-  // }
-
   handleClick() {
+    $('.loading').show()
     $.ajax({
       type: 'GET',
       dataType: 'json',
@@ -49,6 +36,7 @@ class App extends React.Component {
           this.setState({
             results: data.results
           });
+          $('.loading').hide()
           this.setOutput()
         } else {
           this.nextPage(data.next, data.results)
@@ -69,6 +57,7 @@ class App extends React.Component {
           this.setState({
             results: compiled
           });
+          $('.loading').hide()
           this.setOutput()
         } else {
           compiled = results.concat(data.results)

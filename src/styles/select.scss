@@ -9,15 +9,20 @@
 }
 
 select {
-  // border: 0;
-  // -webkit-appearance: none;
-  // -moz-appearance: none;
   background: url('../images/chevron-down.svg')  no-repeat;
 }
 
 .Select-clear-zone {
   display: none;
 }
+
+/**
+ * React Select
+ * ============
+ * Created by Jed Watson and Joss Mackison for KeystoneJS, http://www.keystonejs.com/
+ * https://twitter.com/jedwatson https://twitter.com/jossmackison https://twitter.com/keystonejs
+ * MIT License: https://github.com/JedWatson/react-select
+*/
 
 @keyframes Select-animation-spin {
   to {
@@ -33,10 +38,6 @@ select {
 
 .Select {
   position: relative;
-  // border: solid;
-  // border-radius: 3px;
-  // border-color: rgba(191, 191, 191, .4);
-  // border-width: 1px;
 }
 
 .Select,

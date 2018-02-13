@@ -42,6 +42,10 @@
   opacity: .5;
   font-size: 15px;
 }
+.input-text:focus {
+  outline: none;
+  box-shadow: 0 0 11px rgba(0, 0, 0, .2);
+}
 .button {
   height: 38px;
   width: 15%;
@@ -58,6 +62,9 @@
 }
 .button:hover {
   box-shadow: 0 0 11px rgba(0, 0, 0, .2);
+}
+.button:focus {
+  outline: none;
 }
 .num-results {
   color: #999B9E;
@@ -120,3 +127,16 @@
     color: 333333;
   }
 }
+.loading {
+  display: none;
+  position: absolute;
+  left: 40.5%;
+  top: 48%;
+  -webkit-animation:spin 5s linear infinite;
+  -moz-animation:spin 5s linear infinite;
+  animation:spin 5s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

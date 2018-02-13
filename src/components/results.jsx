@@ -1,6 +1,7 @@
 import React from 'react';
 import ResultList from './result_list.jsx';
 import Vader from '../images/vader-icon.svg';
+import Loading from '../images/loading.png';
 
 class Results extends React.Component {
   render () {
@@ -22,6 +23,9 @@ class Results extends React.Component {
       <div className='results-box'>
         <div className='all-chars'>
           {character}
+        </div>
+        <div className='loading'>
+          <img src={Loading} />
         </div>
         <div className={vader}>
             <Vader />
