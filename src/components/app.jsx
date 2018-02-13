@@ -16,6 +16,7 @@ class App extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleSelection = this.handleSelection.bind(this);
     this.setOutput = this.setOutput.bind(this);
+    this.nextPage = this.nextPage.bind(this);
   }
 
   handleChange(event) {
@@ -24,16 +25,55 @@ class App extends React.Component {
     });
   }
 
+  // handleClick() {
+  //   $.ajax({
+  //     type: 'GET',
+  //     dataType: 'json',
+  //     url: `https://swapi.co/api/people/?search=${this.state.searchName}`,
+  //     success: data => {
+  //       this.setState({
+  //         results: data.results
+  //       });
+  //       this.setOutput()
+  //     }
+  //   });
+  // }
+
   handleClick() {
     $.ajax({
       type: 'GET',
       dataType: 'json',
       url: `https://swapi.co/api/people/?search=${this.state.searchName}`,
       success: data => {
-        this.setState({
-          results: data.results
-        });
-        this.setOutput()
+        if (data.next === null) {
+          this.setState({
+            results: data.results
+          });
+          this.setOutput()
+        } else {
+          this.nextPage(data.next, data.results)
+        }
+      }
+    });
+  }
+
+  nextPage(url, results) {
+    let compiled =[]
+    $.ajax({
+      type: 'GET',
+      dataType: 'json',
+      url: url,
+      success: data => {
+        if (data.next === null) {
+          compiled = results.concat(data.results)
+          this.setState({
+            results: compiled
+          });
+          this.setOutput()
+        } else {
+          compiled = results.concat(data.results)
+          this.nextPage(data.next, compiled)
+        }
       }
     });
   }

@@ -18446,6 +18446,7 @@ var App = function (_React$Component) {
     _this.handleClick = _this.handleClick.bind(_this);
     _this.handleSelection = _this.handleSelection.bind(_this);
     _this.setOutput = _this.setOutput.bind(_this);
+    _this.nextPage = _this.nextPage.bind(_this);
     return _this;
   }
 
@@ -18456,6 +18457,21 @@ var App = function (_React$Component) {
         searchName: event.target.value
       });
     }
+
+    // handleClick() {
+    //   $.ajax({
+    //     type: 'GET',
+    //     dataType: 'json',
+    //     url: `https://swapi.co/api/people/?search=${this.state.searchName}`,
+    //     success: data => {
+    //       this.setState({
+    //         results: data.results
+    //       });
+    //       this.setOutput()
+    //     }
+    //   });
+    // }
+
   }, {
     key: 'handleClick',
     value: function handleClick() {
@@ -18466,10 +18482,38 @@ var App = function (_React$Component) {
         dataType: 'json',
         url: 'https://swapi.co/api/people/?search=' + this.state.searchName,
         success: function success(data) {
-          _this2.setState({
-            results: data.results
-          });
-          _this2.setOutput();
+          if (data.next === null) {
+            _this2.setState({
+              results: data.results
+            });
+            _this2.setOutput();
+          } else {
+            _this2.nextPage(data.next, data.results);
+          }
+        }
+      });
+    }
+  }, {
+    key: 'nextPage',
+    value: function nextPage(url, results) {
+      var _this3 = this;
+
+      var compiled = [];
+      $.ajax({
+        type: 'GET',
+        dataType: 'json',
+        url: url,
+        success: function success(data) {
+          if (data.next === null) {
+            compiled = results.concat(data.results);
+            _this3.setState({
+              results: compiled
+            });
+            _this3.setOutput();
+          } else {
+            compiled = results.concat(data.results);
+            _this3.nextPage(data.next, compiled);
+          }
         }
       });
     }
