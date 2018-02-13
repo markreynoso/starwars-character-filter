@@ -55,9 +55,3 @@ class Filter extends React.Component {
 }
 
 export default Filter;
-
-// <select value={this.props.gender} onChange={this.props.handleSelection} >
-// <option value='none' >Filter by gender</option>
-// <option value='female' >Female({female})</option>
-// <option value='male' >Male({male})</option>
-// </select>

@@ -1014,7 +1014,7 @@ body {
   display: none;
   position: absolute;
   left: calc(50% - 101px);
-  top: calc(50% - 16px);
+  top: calc(50% - 70px);
   -webkit-animation: spin 5s linear infinite;
   -moz-animation: spin 5s linear infinite;
   animation: spin 5s linear infinite;
