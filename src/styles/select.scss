@@ -1,15 +1,18 @@
 @import 'base';
 
 .select-menu {
-  width: 15vw;
   text-align: left;
-  font-family: helvetica;
-  font-size: 16px;
+  font-family: $font-main;
+  font-size: 14px;
   width: 28%;
 }
 
 select {
   background: url('../images/chevron-down.svg')  no-repeat;
+}
+
+.Select {
+  width: 156px;
 }
 
 .Select-clear-zone {
@@ -23,7 +26,6 @@ select {
  * https://twitter.com/jedwatson https://twitter.com/jossmackison https://twitter.com/keystonejs
  * MIT License: https://github.com/JedWatson/react-select
 */
-
 @keyframes Select-animation-spin {
   to {
     transform: rotate(1turn);

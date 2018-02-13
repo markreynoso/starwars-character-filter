@@ -17,6 +17,7 @@ class App extends React.Component {
     this.handleSelection = this.handleSelection.bind(this);
     this.setOutput = this.setOutput.bind(this);
     this.nextPage = this.nextPage.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
   handleChange(event) {
@@ -80,6 +81,12 @@ class App extends React.Component {
     this.setOutput();
   }
 
+  handleKeyPress(event) {
+    if (event.key == 'Enter') {
+      this.handleClick()
+    }
+  }
+
   setOutput() {
     if (this.state.results != []) {
       if (this.state.gender === 'none') {
@@ -116,7 +123,8 @@ class App extends React.Component {
         <Search
           searchName={this.state.searchName}
           handleChange={this.handleChange}
-          handleClick={this.handleClick} />
+          handleClick={this.handleClick}
+          handleKeyPress={this.handleKeyPress} />
         <Filter
           handleSelection={this.handleSelection}
           gender={this.state.gender}
@@ -127,5 +135,4 @@ class App extends React.Component {
   }
 }
 
-// <Results output={this.state.output} />
 export default App;

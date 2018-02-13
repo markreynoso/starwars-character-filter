@@ -50,6 +50,13 @@ const config = {
           },
         }]
       },
+      {
+        test: /\.ttf$/,
+        loader: 'file-loader',
+        options: {
+          name: 'fonts/[name].[ext]',
+        },
+      },
     ],
   },
 };

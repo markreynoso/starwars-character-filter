@@ -10,7 +10,8 @@ class Search extends React.Component {
           type='text'
           placeholder='Search by character name'
           value={this.props.searchName}
-          onChange={this.props.handleChange } />
+          onKeyPress={this.props.handleKeyPress}
+          onChange={this.props.handleChange} />
         <button className='button' onClick={this.props.handleClick} >Search</button>
       </div>
     )

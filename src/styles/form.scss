@@ -1,3 +1,5 @@
+@import 'base';
+
 .layout-boxes {
   background-color: white;
   text-align: center;
@@ -25,16 +27,16 @@
 .input-text {
   background-color: #F7F8FA;
   height: 38px;
-  width: 77%;
-  padding: 0 0 0 10px;
+  width: 75%;
+  padding: 0 0 0 9px;
   margin-top: 15px;
   box-sizing: border-box;
   border-radius: 3px;
   border-style: solid;
   border-color: rgba(191, 191, 191, .5);
   border-width: 1px;
-  font-family: helvetica;
-  font-size: 15px;
+  font-family: $font-main;
+  font-size: 16px;
   color: #333333;
 }
 .input-text::placeholder {
@@ -48,7 +50,7 @@
 }
 .button {
   height: 38px;
-  width: 15%;
+  width: 85px;
   padding: 0;
   margin-top: 15px;
   box-sizing: border-box;
@@ -56,8 +58,8 @@
   border: none;
   background-color: #52A2FF;
   color: white;
-  font-family: helvetica;
-  font-size: 13px;
+  font-family: $font-main;
+  font-size: 14px;
   font-weight: lighter;
 }
 .button:hover {
@@ -68,16 +70,16 @@
 }
 .num-results {
   color: #999B9E;
-  font-family: helvetica;
-  font-size: 16px;
+  font-family: $font-main;
+  font-size: 13px;
   float: left;
-  padding-top: 10px;
+  padding-top: 12px;
 }
 .label {
   color: #999B9E;
-  font-family: helvetica;
-  font-size: 16px;
-  padding: 10px 15px 0 0;
+  font-family: $font-main;
+  font-size: 13px;
+  padding: 12px 15px 0 0;
 }
 
 .vader-show {
@@ -86,7 +88,7 @@
   background: white;
   p {
     color: #BFBFBF;
-    font-family: helvetica;
+    font-family: $font-bold;
     font-size: 22px;
     padding-top: 15px;
   }
@@ -108,21 +110,20 @@
   }
   li {
     display: inline-block;
-    font-family: helvetica;
+    font-family: $font-main;
     font-size: 14px;
     color: #B8BABF;
   }
   li:before {
 	content: '\00a0\2022\00a0\00a0';
 	color: #B8BABF;
-	// color:rgba(0,0,0,0.5);
 	font-size: 14px;
   }
   li:first-child:before {
 	content: '';
   }
   p {
-    font-family: helvetica;
+    font-family: $font-main;
     font-size: 16px;
     color: 333333;
   }
@@ -130,8 +131,8 @@
 .loading {
   display: none;
   position: absolute;
-  left: 40.5%;
-  top: 48%;
+  left: calc(50% - 101px);
+  top: calc(50% - 16px);
   -webkit-animation:spin 5s linear infinite;
   -moz-animation:spin 5s linear infinite;
   animation:spin 5s linear infinite;
@@ -140,3 +141,9 @@
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@media (max-width: 600px) {
+  .input-text {
+    width: 55vw;
+  }
+}

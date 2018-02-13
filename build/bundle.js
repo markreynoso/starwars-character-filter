@@ -18456,6 +18456,7 @@ var App = function (_React$Component) {
     _this.handleSelection = _this.handleSelection.bind(_this);
     _this.setOutput = _this.setOutput.bind(_this);
     _this.nextPage = _this.nextPage.bind(_this);
+    _this.handleKeyPress = _this.handleKeyPress.bind(_this);
     return _this;
   }
 
@@ -18530,6 +18531,13 @@ var App = function (_React$Component) {
       this.setOutput();
     }
   }, {
+    key: 'handleKeyPress',
+    value: function handleKeyPress(event) {
+      if (event.key == 'Enter') {
+        this.handleClick();
+      }
+    }
+  }, {
     key: 'setOutput',
     value: function setOutput() {
       if (this.state.results != []) {
@@ -18569,7 +18577,8 @@ var App = function (_React$Component) {
         _react2.default.createElement(_search2.default, {
           searchName: this.state.searchName,
           handleChange: this.handleChange,
-          handleClick: this.handleClick }),
+          handleClick: this.handleClick,
+          handleKeyPress: this.handleKeyPress }),
         _react2.default.createElement(_gender_filter2.default, {
           handleSelection: this.handleSelection,
           gender: this.state.gender,
@@ -18581,9 +18590,6 @@ var App = function (_React$Component) {
 
   return App;
 }(_react2.default.Component);
-
-// <Results output={this.state.output} />
-
 
 exports.default = App;
 
@@ -18636,6 +18642,7 @@ var Search = function (_React$Component) {
           type: 'text',
           placeholder: 'Search by character name',
           value: this.props.searchName,
+          onKeyPress: this.props.handleKeyPress,
           onChange: this.props.handleChange }),
         _react2.default.createElement(
           'button',
