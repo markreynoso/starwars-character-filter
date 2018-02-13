@@ -147,13 +147,13 @@ $font-bold: 'montserrat-b', sans-serif;
   }
   li:first-child:before {
 	content: '';
+  margin-right: 0;
   }
   p {
     font-family: $font-main;
     font-size: 16px;
     letter-spacing: .5px;
     word-spacing: -10px;
-    margin-right: 0;
     color: 333333;
   }
 }
