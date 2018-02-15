@@ -1,13 +1,12 @@
 # starwars-character-filter
 ---
 ### Description
-[![Build Status](https://travis-ci.org/markreynoso/starwars-character-filter.svg?branch=master)](https://travis-ci.org/markreynoso/starwars-character-filter)
 
 Search the Star Wars API [SWAPI](https://swapi.co/) for your favorite characters by name and see their gender, hair color, and eye color. You may search using letter or partial spelling as well and all relevant results will show. Then filter those results by gender as you desire.
 
 ### Authors
 ---
-* [Authors](https://github.com/markreynoso/starwars-character-filter)
+* [Authors](https://github.com/markreynoso/starwars-character-filter) Mark Reynoso
 
 ### Dependencies
 ---
@@ -67,7 +66,7 @@ You are now ready to run the program on your local machine.
 
 Open your browser and navigate to the following url and you can search the Star Wars API(SWAPI).
 
-[localhost](http://localhost:3000)
+[localhost](http://localhost:3000) http://localhost:3000
 
 ### Test Suite
 ---
