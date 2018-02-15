@@ -6,7 +6,8 @@ Search the Star Wars API [SWAPI](https://swapi.co/) for your favorite characters
 
 ### Authors
 ---
-* [Authors](https://github.com/markreynoso/starwars-character-filter) Mark Reynoso
+* Mark Reynoso
+* [GitHub](https://github.com/markreynoso/)
 
 ### Dependencies
 ---
@@ -66,7 +67,7 @@ You are now ready to run the program on your local machine.
 
 Open your browser and navigate to the following url and you can search the Star Wars API(SWAPI).
 
-[localhost](http://localhost:3000) http://localhost:3000
+[http://localhost:3000](http://localhost:3000)
 
 ### Test Suite
 ---
