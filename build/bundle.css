@@ -1,0 +1,1037 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #F7F8FA;
+}
+
+#content {
+  width: 60%;
+  margin: auto;
+}
+
+.vader-show {
+  display: block;
+}
+
+.vader-hide {
+  display: none;
+}
+
+.shadow,
+.vader-show,
+.all-chars {
+  -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.3);
+}
+
+#content {
+  max-width: 550px;
+}
+
+@media (max-width: 600px) {
+  #content {
+    width: 85%;
+  }
+}/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #F7F8FA;
+}
+
+#content {
+  width: 60%;
+  margin: auto;
+}
+
+.vader-show {
+  display: block;
+}
+
+.vader-hide {
+  display: none;
+}
+
+.shadow,
+.vader-show,
+.all-chars {
+  -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.3);
+}
+
+#content {
+  max-width: 550px;
+}
+
+@media (max-width: 600px) {
+  #content {
+    width: 85%;
+  }
+}
+
+@font-face {
+  font-family: 'montserrat-b';
+  src: url(fonts/MontSerrat-Bold.ttf) format("ttf");
+}
+
+.select-menu {
+  text-align: left;
+  font-family: 'montserrat-b', sans-serif;
+  font-size: 14px;
+  width: 28%;
+}
+
+select {
+  background: url(function ChevronDown(props) {
+    return React.createElement("svg",props,[React.createElement("title",{"key":0},"Path 70"),React.createElement("desc",{"key":1},"Created with Sketch."),React.createElement("defs",{"key":2}),React.createElement("g",{"id":"Page-1","stroke":"none","strokeWidth":"1","fill":"none","fillRule":"evenodd","key":3},React.createElement("g",{"id":"Initial-State","transform":"translate(-646.000000, -185.000000)","fillRule":"nonzero","fill":"#C9CBCF"},React.createElement("g",{"id":"Filter","transform":"translate(441.000000, 171.000000)"},React.createElement("g",{"id":"Select","transform":"translate(77.000000, 0.000000)"},React.createElement("path",{"d":"M131.666437,17.2847261 C131.368317,17.5980242 131.368317,18.1059809 131.666437,18.4192791 L137.897522,24.9675963 C138.127158,25.2089228 138.501364,25.2069326 138.727624,24.9691536 L138.978594,24.7054067 C139.207411,24.4649402 139.203415,24.070908 138.973097,23.828913 L133.285205,17.8526508 L138.973097,11.8751813 C139.20495,11.6315244 139.204854,11.2363775 138.978594,10.9985984 L138.727624,10.7348516 C138.498807,10.4943851 138.121554,10.500971 137.897522,10.7364089 L131.666437,17.2847261 Z","id":"Path-70","transform":"translate(135.295443, 17.852596) rotate(-90.000000) translate(-135.295443, -17.852596) "})))))]);
+}) no-repeat;
+}
+
+.Select {
+  width: 156px;
+}
+
+.Select-clear-zone {
+  display: none;
+}
+
+/**
+ * React Select
+ * ============
+ * Created by Jed Watson and Joss Mackison for KeystoneJS, http://www.keystonejs.com/
+ * https://twitter.com/jedwatson https://twitter.com/jossmackison https://twitter.com/keystonejs
+ * MIT License: https://github.com/JedWatson/react-select
+*/
+
+@keyframes Select-animation-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@-webkit-keyframes Select-animation-spin {
+  to {
+    -webkit-transform: rotate(1turn);
+  }
+}
+
+.Select {
+  position: relative;
+}
+
+.Select,
+.Select div,
+.Select input,
+.Select span {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.Select.is-disabled > .Select-control {
+  background-color: #f9f9f9;
+}
+
+.Select.is-disabled > .Select-control:hover {
+  box-shadow: none;
+}
+
+.Select.is-disabled .Select-arrow-zone {
+  cursor: default;
+  pointer-events: none;
+}
+
+.Select-control {
+  background-color: #fff;
+  border-color: rgba(191, 191, 191, 0.5);
+  border-radius: 3px;
+  border: 1px solid rgba(191, 191, 191, 0.5);
+  color: #FFF;
+  cursor: default;
+  display: table;
+  border-spacing: 0;
+  border-collapse: separate;
+  height: 36px;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.Select-control:hover {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+
+.Select-control .Select-input:focus {
+  outline: none;
+}
+
+.is-searchable.is-open > .Select-control {
+  cursor: text;
+}
+
+.is-open > .Select-control {
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background: #fff;
+  border-color: #b3b3b3 #ccc #d9d9d9;
+}
+
+.is-open > .Select-control .Select-arrow {
+  top: -2px;
+  border-color: transparent transparent #999;
+  border-width: 0 5px 5px;
+}
+
+.is-searchable.is-focused:not(.is-open) > .Select-control {
+  cursor: text;
+}
+
+.is-focused:not(.is-open) > .Select-control {
+  border-color: #ac208e #c224a0 #c224a0;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px -1px fade(#ac208e, 50%);
+}
+
+.Select-placeholder,
+.Select--single > .Select-control .Select-value {
+  bottom: 0;
+  color: #aaa;
+  left: 0;
+  line-height: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.has-value.Select--single > .Select-control .Select-value .Select-value-label,
+.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value .Select-value-label {
+  color: #323233;
+}
+
+.has-value.Select--single > .Select-control .Select-value a.Select-value-label,
+.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.has-value.Select--single > .Select-control .Select-value a.Select-value-label:hover,
+.has-value.Select--single > .Select-control .Select-value a.Select-value-label:focus,
+.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label:hover,
+.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label:focus {
+  color: #ac208e;
+  outline: none;
+  text-decoration: underline;
+}
+
+.Select-input {
+  height: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+
+.Select-input > input {
+  background: none transparent;
+  border: 0 none;
+  box-shadow: none;
+  cursor: default;
+  display: inline-block;
+  font-family: 'montserrat-b', sans-serif;
+  font-size: inherit;
+  color: #323233;
+  margin: 0;
+  outline: none;
+  line-height: 14px;
+  /* For IE 8 compatibility */
+  padding: 8px 0 12px;
+  /* For IE 8 compatibility */
+  -webkit-appearance: none;
+}
+
+.is-focused .Select-input > input {
+  cursor: text;
+}
+
+.has-value.is-pseudo-focused .Select-input {
+  opacity: 0;
+}
+
+.Select-control:not(.is-searchable) > .Select-input {
+  outline: none;
+}
+
+.Select-loading-zone {
+  cursor: pointer;
+  display: table-cell;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 16px;
+}
+
+.Select-loading {
+  -webkit-animation: Select-animation-spin 400ms infinite linear;
+  -o-animation: Select-animation-spin 400ms infinite linear;
+  animation: Select-animation-spin 400ms infinite linear;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-right-color: #333;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+.Select .Select-aria-only {
+  display: inline-block;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.Select-arrow-zone {
+  cursor: pointer;
+  display: table-cell;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 25px;
+  padding-right: 5px;
+}
+
+.Select-arrow {
+  border-color: #999 transparent transparent;
+  border-style: solid;
+  border-width: 5px 5px 2.5px;
+  display: inline-block;
+  height: 0;
+  width: 0;
+  position: relative;
+}
+
+.is-open .Select-arrow,
+.Select-arrow-zone:hover > .Select-arrow {
+  border-top-color: #666;
+}
+
+@-webkit-keyframes Select-animation-fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes Select-animation-fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.Select-menu-outer {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top-color: #e6e6e6;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  margin-top: -1px;
+  max-height: 200px;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 1000;
+  -webkit-overflow-scrolling: touch;
+}
+
+.Select-menu {
+  max-height: 198px;
+  overflow-y: auto;
+}
+
+.Select-option {
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #666666;
+  cursor: pointer;
+  display: block;
+  padding: 8px 10px;
+}
+
+.Select-option:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.Select-option.is-selected {
+  background-color: none;
+  color: #ac208e;
+}
+
+.Select-option.is-focused {
+  background-color: #fefbfd;
+  color: #ac208e;
+}/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #F7F8FA;
+}
+
+#content {
+  width: 60%;
+  margin: auto;
+}
+
+.vader-show {
+  display: block;
+}
+
+.vader-hide {
+  display: none;
+}
+
+.shadow,
+.vader-show,
+.all-chars {
+  -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.3);
+}
+
+#content {
+  max-width: 550px;
+}
+
+@media (max-width: 600px) {
+  #content {
+    width: 85%;
+  }
+}
+
+@font-face {
+  font-family: 'montserrat-r';
+  src: url(fonts/MontSerrat-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'montserrat-b';
+  src: url(fonts/MontSerrat-Bold.ttf) format("truetype");
+}
+
+.layout-boxes {
+  background-color: white;
+  text-align: center;
+}
+
+.filters {
+  background: none;
+  height: 60px;
+}
+
+.results {
+  clear: both;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.input-box {
+  border-radius: 3px;
+  height: 68px;
+  margin: 15% 0 8% 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.input-text {
+  background-color: #F7F8FA;
+  height: 38px;
+  width: 75%;
+  padding: 0 0 0 9px;
+  margin-top: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border-style: solid;
+  border-color: rgba(191, 191, 191, 0.5);
+  border-width: 1px;
+  font-family: "montserrat-r", sans-serif;
+  font-size: 16px;
+  color: #333333;
+}
+
+.input-text::placeholder {
+  color: #BABCC1;
+  opacity: .5;
+  font-size: 15px;
+}
+
+.input-text:focus {
+  outline: none;
+  box-shadow: 0 0 11px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+  height: 38px;
+  width: 85px;
+  padding: 0;
+  margin-top: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: none;
+  background-color: #52A2FF;
+  color: white;
+  font-family: "montserrat-r", sans-serif;
+  font-size: 14px;
+}
+
+.button:hover {
+  box-shadow: 0 0 11px rgba(0, 0, 0, 0.2);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.num-results {
+  float: left;
+  padding-top: 12px;
+}
+
+.num-results p {
+  color: #999B9E;
+  font-family: "montserrat-b", sans-serif;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+}
+
+.label {
+  color: #999B9E;
+  font-family: "montserrat-b", sans-serif;
+  letter-spacing: 1.5px;
+  font-size: 13px;
+  padding: 12px 15px 0 0;
+}
+
+.vader-show {
+  padding: 150px 0;
+  text-align: center;
+  background: white;
+}
+
+.vader-show p {
+  color: #BFBFBF;
+  font-family: "montserrat-r", sans-serif;
+  font-size: 22px;
+  padding-top: 15px;
+}
+
+.all-chars {
+  border-radius: 3px;
+  background: white;
+}
+
+.all-chars > *:first-child {
+  border-top: none;
+}
+
+.single-char {
+  padding: 15px 0 15px 15px;
+  border-top: solid;
+  border-top-color: rgba(191, 191, 191, 0.5);
+  border-width: 1px;
+}
+
+.single-char ul {
+  padding-top: 4px;
+}
+
+.single-char li {
+  display: inline-block;
+  font-family: "montserrat-r", sans-serif;
+  font-size: 14px;
+  padding-right: 1px;
+  color: #B8BABF;
+}
+
+.single-char li:before {
+  content: '\A0\2022\A0\A0';
+  color: #B8BABF;
+  font-size: 14px;
+  padding-top: 2px;
+  margin-right: -3px;
+  vertical-align: middle;
+}
+
+.single-char li:first-child:before {
+  content: '';
+  margin-right: 0;
+}
+
+.single-char p {
+  font-family: "montserrat-r", sans-serif;
+  font-size: 16px;
+  color: 333333;
+}
+
+.loading {
+  display: none;
+  position: absolute;
+  left: calc(50% - 101px);
+  top: calc(50% - 70px);
+  -webkit-animation: spin 5s linear infinite;
+  -moz-animation: spin 5s linear infinite;
+  animation: spin 5s linear infinite;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .input-text {
+    width: 55vw;
+  }
+}

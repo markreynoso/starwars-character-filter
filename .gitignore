@@ -59,7 +59,10 @@ typings/
 
 # challenge docs
 subsplash_challenge.pdf
-
 Front-end-Engineer-Code-Challenge
 
 __MACOSX
+.DS_Store
+
+# python environment
+ENV
