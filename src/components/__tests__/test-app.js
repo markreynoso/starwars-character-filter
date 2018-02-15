@@ -22,9 +22,4 @@ describe('App component', () => {
     const component = shallow(<App />);
     expect(component.state().searchName).toBe('')
   });
-  it ('test mount', () => {
-    const component = mount(<App />);
-    console.log(component);
-    // expect(component.state().searchName).toBe('')
-  });
 })

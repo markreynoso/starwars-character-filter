@@ -17,17 +17,25 @@ Search the Star Wars API [SWAPI](https://swapi.co/) for your favorite characters
 * babel-cli: 6.26.0
 * babel-core: 6.26.0
 * babel-eslint: 8.2.1
+* babel-jest: 22.2.2
 * babel-loader: 7.1.2
 * babel-plugin-transform-object-rest-spread: 6.26.0
 * babel-preset-env: 1.6.1
 * babel-preset-react: 6.24.1
 * css-loader: 0.28.9
+* enzyme: 3.3.0
+* enzyme-adapter-react-16: 1.1.1
+* enzyme-to-json: 3.3.1
 * extract-text-webpack-plugin: 3.0.2
 * file-loader: 1.1.6
 * html-webpack-plugin: 2.30.1
+* identity-obj-proxy: 3.0.0
+* jest: 22.3.0
+* jest-enzyme: 4.2.0
 * node-sass: 4.7.2
 * prop-types: 15.6.0
 * react-select: 1.2.1
+* react-test-renderer: 16.2.0
 * resolve-url-loader: 2.2.1
 * sass-loader: 6.0.6
 * style-loader: 0.20.1
@@ -64,26 +72,9 @@ Open your browser and navigate to the following url and you can search the Star 
 ### Test Suite
 ---
 ##### *Running Tests*
-This application uses [unittest](https://docs.python.org/3/library/unittest.html) as a testing suite. To run tests, run:
+This application uses [jest](https://facebook.github.io/jest/) and [enzyme](http://airbnb.io/enzyme/) as a testing suite. To run tests, run:
 
-``$ python3 -m unittest``
-
-To view test coverage, run:
-
-``$ coverage report -m``
-##### *Test Files*
-The testing files for this project are:
-
-| File Name | Description |
-|:---:|:---:|
-| `./node_modules/node-gyp/gyp/gyptest.py` | None |
-| `./node_modules/node-gyp/gyp/pylib/gyp/common_test.py` | None |
-| `./node_modules/node-gyp/gyp/pylib/gyp/input_test.py` | None |
-| `./node_modules/node-gyp/gyp/pylib/gyp/MSVSSettings_test.py` | None |
-| `./node_modules/node-gyp/gyp/pylib/gyp/easy_xml_test.py` | None |
-| `./node_modules/node-gyp/gyp/pylib/gyp/generator/msvs_test.py` | None |
-| `./node_modules/node-gyp/gyp/pylib/gyp/generator/ninja_test.py` | None |
-| `./node_modules/node-gyp/gyp/pylib/gyp/generator/xcode_test.py` | None |
+``$ npm test``
 
 ### License
 ---

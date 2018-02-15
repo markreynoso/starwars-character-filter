@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'montserrat-r';
-  src: url('./fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+  src: url('./fonts/MontSerrat-Regular.ttf') format('truetype'),
 }
 @font-face {
   font-family: 'montserrat-b';
@@ -48,8 +48,6 @@ $font-bold: 'montserrat-b', sans-serif;
   border-color: rgba(191, 191, 191, .5);
   border-width: 1px;
   font-family: $font-main;
-  word-spacing: -10px;
-  letter-spacing: .5px;
   font-size: 16px;
   color: #333333;
 }
@@ -74,7 +72,6 @@ $font-bold: 'montserrat-b', sans-serif;
   color: white;
   font-family: $font-main;
   font-size: 14px;
-  letter-spacing: .5px;
 }
 .button:hover {
   box-shadow: 0 0 11px rgba(0, 0, 0, .2);
@@ -108,8 +105,6 @@ $font-bold: 'montserrat-b', sans-serif;
     color: #BFBFBF;
     font-family: $font-main;
     font-size: 22px;
-    word-spacing: -15px;
-    letter-spacing: 0.03em;
     padding-top: 15px;
   }
 }
@@ -132,8 +127,6 @@ $font-bold: 'montserrat-b', sans-serif;
     display: inline-block;
     font-family: $font-main;
     font-size: 14px;
-    letter-spacing: .5px;
-    word-spacing: -11px;
     padding-right: 1px;
     color: #B8BABF;
   }
@@ -152,8 +145,6 @@ $font-bold: 'montserrat-b', sans-serif;
   p {
     font-family: $font-main;
     font-size: 16px;
-    letter-spacing: .5px;
-    word-spacing: -10px;
     color: 333333;
   }
 }

@@ -12,5 +12,9 @@ describe ('Search component', () => {
   it ('renders props correctly', () => {
     const component = shallow(<Search searchName='none'/>)
     expect(component.instance().props.searchName).toBe('none')
-  })
+  });
+  it ('renders button text correctly', () => {
+    const component = shallow(<Search />)
+    expect(component.text()).toEqual('Search')
+  });
 })

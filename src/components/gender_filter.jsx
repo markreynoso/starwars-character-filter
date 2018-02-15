@@ -2,16 +2,11 @@ import React from 'react';
 import Results from './results.jsx';
 import Select from 'react-select';
 import Chev from '../images/chevron-down.svg';
+import PropTypes from 'prop-types';
 
 class Filter extends React.Component {
   render () {
-    let len = this.props.output.length
-    let count
-    if (len === 1) {
-      count = `${len} RESULT`
-    } else {
-      count = `${len} RESULTS`
-    }
+    let count = setCount(this.props.output.length)
     let female = 0
     let male = 0
     let na = 0
@@ -52,6 +47,17 @@ class Filter extends React.Component {
       </div>
     )
   }
+}
+
+Filter.propTypes = {
+  output: PropTypes.array.isRequired,
+  results: PropTypes.array.isRequired,
+  handleSelection: PropTypes.func.isRequired,
+  gender: PropTypes.string.isRequired
+}
+
+function setCount(length) {
+  return length === 1 ? `${length} RESULT` : `${length} RESULTS`
 }
 
 export default Filter;
