@@ -18788,7 +18788,9 @@ function defineAttributes(props) {
         if (_i === 0) {
           capitalEye = _capitalize + ' eyes';
         } else {
-          capitalEye += ', ' + _capitalize + ' eyes';
+          var removeLast = capitalEye.slice(0, -1);
+          capitalEye = removeLast + ', ' + _capitalize + ' eye';
+          console.log(capitalEye);
         }
       }
       attributeList.push(capitalEye);
