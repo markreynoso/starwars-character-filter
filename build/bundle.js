@@ -18790,7 +18790,6 @@ function defineAttributes(props) {
         } else {
           var removeLast = capitalEye.slice(0, -1);
           capitalEye = removeLast + ', ' + _capitalize + ' eye';
-          console.log(capitalEye);
         }
       }
       attributeList.push(capitalEye);
