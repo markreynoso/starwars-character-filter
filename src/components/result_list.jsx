@@ -56,7 +56,9 @@ function defineAttributes(props) {
        if (i === 0) {
          capitalEye = capitalize + ' eyes'
        } else {
-         capitalEye += (', ' + capitalize + ' eyes')
+         let removeLast = capitalEye.slice(0, -1)
+         capitalEye = (removeLast + ', ' + capitalize + ' eye')
+         console.log(capitalEye);
        }
      }
      attributeList.push(capitalEye)
