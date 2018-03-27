@@ -4,6 +4,9 @@
 
 Search the Star Wars API [SWAPI](https://swapi.co/) for your favorite characters by name and see their gender, hair color, and eye color. You may search using letter or partial spelling as well and all relevant results will show. Then filter those results by gender as you desire.
 
+Visit the live site:
+https://starwarscharacters.netlify.com/
+
 ### Authors
 ---
 * Mark Reynoso
